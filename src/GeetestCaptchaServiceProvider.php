@@ -27,7 +27,7 @@ class GeetestCaptchaServiceProvider extends PackageServiceProvider
         });
 
         Blade::directive('geetestCaptchaInit', function ($elementId) {
-            return view('initGeetest4', [
+            return view('geetest-captcha::initGeetest4', [
                 'elementId' => $elementId,
             ])->render();
         });
