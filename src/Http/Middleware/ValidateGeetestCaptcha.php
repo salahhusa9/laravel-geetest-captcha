@@ -10,7 +10,7 @@ class ValidateGeetestCaptcha
     public function handle($request, Closure $next)
     {
         $value = $request->input('geetest_captcha');
-        if (!GeetestCaptcha::validate($value)) {
+        if (! GeetestCaptcha::validate($value)) {
             return response()->json(['message' => 'Geetest captcha validation failed'], 422);
         }
 
