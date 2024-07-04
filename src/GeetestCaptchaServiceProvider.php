@@ -22,11 +22,11 @@ class GeetestCaptchaServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasCommand(GeetestCaptchaCommand::class);
 
-        Blade::directive('geetest-captcha-assets', function () {
+        Blade::directive('geetestCaptchaAssets', function () {
             return '<script src="https://static.geetest.com/v4/gt4.js"></script>';
         });
 
-        Blade::directive('geetest-captcha-init', function ($elementId) {
+        Blade::directive('geetestCaptchaInit', function ($elementId) {
             return view('initGeetest4', [
                 'elementId' => $elementId,
             ])->render();
