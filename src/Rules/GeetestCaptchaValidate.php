@@ -5,7 +5,7 @@ namespace Salahhusa9\GeetestCaptcha\Rules;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class GeetestValidate implements ValidationRule
+class GeetestCaptchaValidate implements ValidationRule
 {
     /**
      * Run the validation rule.
@@ -15,6 +15,10 @@ class GeetestValidate implements ValidationRule
         $captcha_id = env('GEETEST_ID');
         $captcha_key = env('GEETEST_KEY');
         $api_server = 'http://gcaptcha4.geetest.com';
+
+        if (empty($value)) {
+            $fail('validation.geetest')->translate();
+        }
 
         $value = json_decode($value, true);
         // 2.get the verification parameters passed from the front end after verification

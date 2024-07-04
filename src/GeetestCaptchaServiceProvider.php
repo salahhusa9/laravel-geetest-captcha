@@ -41,6 +41,7 @@ class GeetestCaptchaServiceProvider extends PackageServiceProvider
                             .appendTo("#{{ $elementId }}")
                             .onSuccess(function (e) {
                                 let result = JSON.stringify(geetest.getValidate());
+                                result = result.replace(/"/g, '&quot;');
                                 $("#{{ $elementId }}").parent().append('<input type="hidden" name="geetest_captcha" value="' + result + '">');
                             })
                     });
