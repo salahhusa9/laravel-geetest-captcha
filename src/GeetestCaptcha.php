@@ -5,8 +5,11 @@ namespace Salahhusa9\GeetestCaptcha;
 class GeetestCaptcha
 {
     private $captcha_id;
+
     private $captcha_key;
+
     private $api_server;
+
     private $validatedData;
 
     public function __construct()
@@ -47,7 +50,7 @@ class GeetestCaptcha
             'gen_time' => $gen_time,
             'sign_token' => $sign_token,
         ];
-        $url = sprintf($api_server . '/validate' . '?captcha_id=%s', $captcha_id);
+        $url = sprintf($api_server.'/validate'.'?captcha_id=%s', $captcha_id);
         $res = $this->post_request($url, $query);
         $obj = json_decode($res, true);
         $this->validatedData = $obj;
