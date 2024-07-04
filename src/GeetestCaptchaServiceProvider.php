@@ -3,7 +3,6 @@
 namespace Salahhusa9\GeetestCaptcha;
 
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\View;
 use Salahhusa9\GeetestCaptcha\Commands\GeetestCaptchaCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
