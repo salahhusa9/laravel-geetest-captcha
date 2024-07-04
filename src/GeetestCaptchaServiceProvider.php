@@ -2,9 +2,9 @@
 
 namespace Salahhusa9\GeetestCaptcha;
 
+use Salahhusa9\GeetestCaptcha\Commands\GeetestCaptchaCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Salahhusa9\GeetestCaptcha\Commands\GeetestCaptchaCommand;
 
 class GeetestCaptchaServiceProvider extends PackageServiceProvider
 {
