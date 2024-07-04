@@ -21,9 +21,9 @@ class GeetestCaptcha
 
     public function validate($value)
     {
-        $captcha_id = env('GEETEST_ID');
-        $captcha_key = env('GEETEST_KEY');
-        $api_server = 'http://gcaptcha4.geetest.com';
+        $captcha_id = $this->captcha_id;
+        $captcha_key = $this->captcha_key;
+        $api_server = $this->api_server;
 
         if (empty($value)) {
             return false;
