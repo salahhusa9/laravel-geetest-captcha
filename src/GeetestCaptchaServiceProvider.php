@@ -2,10 +2,10 @@
 
 namespace Salahhusa9\GeetestCaptcha;
 
+use Illuminate\Support\Facades\Blade;
+use Salahhusa9\GeetestCaptcha\Commands\GeetestCaptchaCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Salahhusa9\GeetestCaptcha\Commands\GeetestCaptchaCommand;
-use Illuminate\Support\Facades\Blade;
 
 class GeetestCaptchaServiceProvider extends PackageServiceProvider
 {
@@ -27,8 +27,8 @@ class GeetestCaptchaServiceProvider extends PackageServiceProvider
         });
 
         Blade::directive('geetest-captcha-init', function ($elementId) {
-            return view('initGeetest4',[
-                'elementId' => $elementId
+            return view('initGeetest4', [
+                'elementId' => $elementId,
             ])->render();
         });
     }
