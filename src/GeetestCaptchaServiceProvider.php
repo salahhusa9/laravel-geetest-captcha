@@ -20,7 +20,7 @@ class GeetestCaptchaServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-geetest-captcha')
             // ->hasConfigFile()
-            ->hasViews()
+            // ->hasViews()
             ->hasCommand(GeetestCaptchaCommand::class);
 
         Blade::directive('geetestCaptchaAssets', function () {
@@ -41,7 +41,7 @@ class GeetestCaptchaServiceProvider extends PackageServiceProvider
                         geetest
                             .appendTo("#{{ $elementId }}")
                             .onSuccess(function (e) {
-                                let result = geetest.getValidate();
+                                let result = JSON.stringify(geetest.getValidate());
                                 $("#{{ $elementId }}").parent().append('<input type="hidden" name="geetest_captcha_data" value="' + result + '">');
                             })
                     });
