@@ -5,7 +5,7 @@ namespace Salahhusa9\GeetestCaptcha\Rules;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class Geetest implements ValidationRule
+class GeetestValidate implements ValidationRule
 {
     /**
      * Run the validation rule.
@@ -42,7 +42,7 @@ class Geetest implements ValidationRule
         $obj = json_decode($res, true);
 
         if ($obj['result'] != 'success') {
-            $fail('The :attribute is invalid.');
+            $fail('validation.geetest')->translate();
         }
     }
 
