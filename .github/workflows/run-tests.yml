@@ -38,11 +38,7 @@ jobs:
 
           - php: 8.0.2
             laravel: 10.*
-          - php: 8.0.2
-            laravel: 10.*
 
-          - php: 8.0.2
-            laravel: 11.*
           - php: 8.0.2
             laravel: 11.*
 
