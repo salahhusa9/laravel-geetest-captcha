@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '**.php'
+      - '**.json'
 
 permissions:
   contents: write
