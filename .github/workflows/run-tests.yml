@@ -18,7 +18,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         php: [8.3, 8.2, 8.0.2, 7.4]
-        laravel: [11.*, 10.*, 9.*, 8.*]
+        laravel: [11.*, 10.*, 9.*]
         stability: [prefer-lowest, prefer-stable]
         include:
           - laravel: 11.*
@@ -30,17 +30,8 @@ jobs:
           - laravel: 9.*
             testbench: 7.*
             carbon: ^2.63
-          - laravel: 8.*
-            testbench: 6.*
-            carbon: ^2.63
         exclude:
           - laravel: 8.*
-            php: 8.3
-
-          - laravel: 8.*
-            php: 8.2
-
-          - laravel: 8.*
             php: 8.0.2
 
           - laravel: 9.*
@@ -49,17 +40,8 @@ jobs:
           - laravel: 9.*
             php: 8.2
 
-          - laravel: 9.*
-            php: 7.4
-
-          - laravel: 10.*
-            php: 7.4
-
           - laravel: 10.*
             php: 8.0.2
-
-          - laravel: 11.*
-            php: 7.4
 
           - laravel: 11.*
             php: 8.0.2
