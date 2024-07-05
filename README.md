@@ -5,15 +5,11 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/salahhusa9/laravel-geetest-captcha/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/salahhusa9/laravel-geetest-captcha/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/salahhusa9/laravel-geetest-captcha.svg?style=flat-square)](https://packagist.org/packages/salahhusa9/laravel-geetest-captcha)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Laravel Geetest Captcha is a package that provides a simple way to integrate Geetest Captcha in your Laravel application.
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-geetest-captcha.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-geetest-captcha)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Does your business depend on our contributions? Reach out and support us on [Github sponsor](https://github.com/sponsors/salahhusa9). All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
 
 ## Installation
 
@@ -23,37 +19,77 @@ You can install the package via composer:
 composer require salahhusa9/laravel-geetest-captcha
 ```
 
-You can publish and run the migrations with:
+You need to add `@geetestCaptchaAssets()` in head tag in your layout file:
 
-```bash
-php artisan vendor:publish --tag="laravel-geetest-captcha-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-geetest-captcha-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-geetest-captcha-views"
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @geetestCaptchaAssets()
+</head>
+<body>
+    ...
+</body>
+</html>
 ```
 
 ## Usage
+### Use in form
+
+You can use in form like this:
+
+In first add `@geetestCaptchaInit('captcha-id')` in your form, captcha-id is the id of the captcha div.
+
+```html
+<!-- add @ -->
+
+<form method="POST" action="{{ route('login') }}">
+    @csrf
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <div id="captcha-id">
+            <!-- hire we render geetest captcha -->
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+```
+
+and for validation you can use `geetest_captcha` rule in your controller like this:
 
 ```php
-$geetestCaptcha = new Salahhusa9\GeetestCaptcha();
-echo $geetestCaptcha->echoPhrase('Hello, Salahhusa9!');
+use Salahhusa9\GeetestCaptcha\Rules\GeetestCaptchaValidate;
+
+public function login(Request $request)
+{
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+        'geetest_captcha' => ['required', new GeetestCaptchaValidate]
+    ]);
+
+    // your logic
+}
+```
+
+### Validate via middleware
+
+You can use in middleware like this:
+```php
+    use Salahhusa9\GeetestCaptcha\Http\Middleware\ValidateGeetestCaptcha;
+
+    Route::post('login', [LoginController::class, 'login'])->middleware(ValidateGeetestCaptcha::class);
 ```
 
 ## Testing
