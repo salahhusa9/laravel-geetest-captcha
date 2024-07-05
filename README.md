@@ -42,7 +42,7 @@ You need to add `@geetestCaptchaAssets()` in head tag in your layout file:
 
 You can use in form like this:
 
-In first add `@geetestCaptchaInit('captcha-id')` in your form, captcha-id is the id of the captcha div.
+In first add `@geetestCaptchaInit('captcha-id')` in footer of page as script tag, `captcha-id` is the id of the captcha div.
 
 ```html
 <!-- add @ -->
