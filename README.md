@@ -45,8 +45,6 @@ You can use in form like this:
 In first add `@geetestCaptchaInit('captcha-id')` in footer of page as script tag, `captcha-id` is the id of the captcha div.
 
 ```html
-<!-- add @ -->
-
 <form method="POST" action="{{ route('login') }}">
     @csrf
     <div class="form-group">
@@ -64,6 +62,8 @@ In first add `@geetestCaptchaInit('captcha-id')` in footer of page as script tag
     </div>
     <button type="submit" class="btn btn-primary">Login</button>
 </form>
+
+@geetestCaptchaInit('captcha-id')
 ```
 
 and for validation you can use `geetest_captcha` rule in your controller like this:
