@@ -12,4 +12,3 @@ class WipTest extends TestCase
         $this->assertTrue(true);
     }
 }
-
