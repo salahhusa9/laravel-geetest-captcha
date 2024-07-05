@@ -2,13 +2,12 @@ name: run-tests
 
 on:
   push:
-    # paths:
-    #   - '**.yml'
-    #   - '**.php'
-    #   - '.github/workflows/run-tests.yml'
-    #   - 'phpunit.xml.dist'
-    #   - 'composer.json'
-    #   - 'composer.lock'
+    paths:
+      - '**.php'
+      - '.github/workflows/run-tests.yml'
+      - 'phpunit.xml.dist'
+      - 'composer.json'
+      - 'composer.lock'
 
 jobs:
   test:
@@ -29,12 +28,6 @@ jobs:
             testbench: 8.*
             carbon: ^2.63
           - laravel: 9.*
-            testbench: 7.*
-            carbon: ^2.63
-            php: 8.0.2
-        exclude:
-          - php: 8.3
-            laravel: 9.*
             testbench: 7.*
             carbon: ^2.63
 
