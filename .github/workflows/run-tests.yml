@@ -27,6 +27,24 @@ jobs:
           - laravel: 10.*
             testbench: 8.*
             carbon: ^2.63
+          - laravel: 9.*
+            testbench: 7.*
+            carbon: ^2.63
+        exclude:
+          - laravel: 8.*
+            php: 8.0.2
+
+          - laravel: 9.*
+            php: 8.3
+
+          - laravel: 9.*
+            php: 8.2
+
+          - laravel: 10.*
+            php: 8.0.2
+
+          - laravel: 11.*
+            php: 8.0.2
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
@@ -55,4 +73,4 @@ jobs:
         run: composer show -D
 
       - name: Execute tests
-        run: vendor/bin/pest --ci
+        run: vendor/bin/phpunit
