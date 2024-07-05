@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-geetest-captcha` will be documented in this file.
 
+## v0.0.2 - 2024-07-05
+
+### What's Changed
+
+* Support Laravel 9 by @salahhusa9 in https://github.com/salahhusa9/laravel-geetest-captcha/pull/5
+* Update dependency phpunit/phpunit to v11 by @renovate in https://github.com/salahhusa9/laravel-geetest-captcha/pull/6
+* Fix vertions by @salahhusa9 in https://github.com/salahhusa9/laravel-geetest-captcha/pull/7
+
+**Full Changelog**: https://github.com/salahhusa9/laravel-geetest-captcha/compare/v0.0.1...v0.0.2
+
 ## v0.0.1 - 2024-07-05
 
 ### What's Changed
