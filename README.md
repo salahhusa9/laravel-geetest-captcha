@@ -1,6 +1,7 @@
 # Laravel Geetest Captcha, the best alternative to Google reCaptcha
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/salahhusa9/laravel-geetest-captcha.svg?style=flat-square)](https://packagist.org/packages/salahhusa9/laravel-geetest-captcha)
+![laravel](https://img.shields.io/badge/Laravel-9%7C10%7C11-red)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/salahhusa9/laravel-geetest-captcha/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/salahhusa9/laravel-geetest-captcha/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/salahhusa9/laravel-geetest-captcha/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/salahhusa9/laravel-geetest-captcha/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/salahhusa9/laravel-geetest-captcha.svg?style=flat-square)](https://packagist.org/packages/salahhusa9/laravel-geetest-captcha)
