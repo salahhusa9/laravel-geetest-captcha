@@ -14,13 +14,13 @@ Does your business depend on our contributions? Reach out and support us on [Git
 
 ## Installation
 
-You can install the package via composer:
+1. You can install the package via composer:
 
 ```bash
 composer require salahhusa9/laravel-geetest-captcha
 ```
 
-You need to add `@geetestCaptchaAssets()` in head tag in your layout file:
+2. You need to add `@geetestCaptchaAssets()` in head tag in your layout file:
 
 ```html
 <!DOCTYPE html>
@@ -37,6 +37,10 @@ You need to add `@geetestCaptchaAssets()` in head tag in your layout file:
 </body>
 </html>
 ```
+
+3. Sign up and activate your GeeTest account on the [official website](https://geetest.com)
+4. Create an ID and Key on the dashboard
+5. add GEETEST_ID and GEETEST_KEY in .env file
 
 ## Usage
 ### Use in form
