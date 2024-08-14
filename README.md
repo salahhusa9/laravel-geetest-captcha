@@ -8,6 +8,9 @@
 
 Laravel Geetest Captcha is a package that provides a simple way to integrate Geetest Captcha in your Laravel application.
 
+![20240705-122929d](https://github.com/user-attachments/assets/24c38b93-817a-43ec-bc30-9cf54736b346)
+
+
 ## Support us
 
 Does your business depend on our contributions? Reach out and support us on [Github sponsor](https://github.com/sponsors/salahhusa9). All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
