@@ -55,7 +55,7 @@ class GeetestCaptcha
         $obj = json_decode($res, true);
         $this->validatedData = $obj;
 
-        if (empty($obj) or !isset($obj['result'])) {
+        if (empty($obj) or ! isset($obj['result'])) {
             return false;
         }
 
