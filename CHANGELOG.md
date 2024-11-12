@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-geetest-captcha` will be documented in this file.
 
+## v0.0.3 - 2024-11-12
+
+### What's Changed
+
+* [fix] Add error handling for empty or missing response by @salahhusa9 in https://github.com/salahhusa9/laravel-geetest-captcha/pull/9
+
+**Full Changelog**: https://github.com/salahhusa9/laravel-geetest-captcha/compare/v0.0.2...v0.0.3
+
 ## v0.0.2 - 2024-07-05
 
 ### What's Changed
