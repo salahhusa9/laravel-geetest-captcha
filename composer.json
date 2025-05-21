@@ -26,7 +26,7 @@
     "require-dev": {
         "nunomaduro/collision": "^8.0||^7.0||^6.0",
         "orchestra/testbench": "^9.0||^8.0||^7.0",
-        "phpunit/phpunit": "^11.0||^10.0||^9.0"
+        "phpunit/phpunit": "12.1.6"
     },
     "autoload": {
         "psr-4": {
